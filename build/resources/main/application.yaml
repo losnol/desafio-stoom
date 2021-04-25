@@ -1,0 +1,18 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  relational-database:
+  enable: true
+  jpa:
+    properties:
+      hibernate:
+          ddl-auto: update
+          dialect: org.hibernate.dialect.H2Dialect
+      generate-ddl: true
+    packages-to-scan: "br.com.desafiostoom.application.data.entity"
+    datasource:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:file:C:/temp/test_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;DB_CLOSE_DELAY=-1
+      username: SA
+      password: ""
