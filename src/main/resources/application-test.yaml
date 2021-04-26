@@ -20,4 +20,4 @@ spring:
     show-sql: true
     open-in-view: false
 google-maps:
-  api-key: AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw
+  api-key: <API_KEY_GOOGLE_MAPS>

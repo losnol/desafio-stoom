@@ -8,7 +8,7 @@ ENV SERVER_PORT="8080" \
 	DB_USER="root" \
 	DB_USER_PASSWORD="root" \
 	DB_URL="jdbc:mysql://localhost:3306/desafio_stoom" \
-	GOOGLE_MAPS_API_KEY="AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw"
+	GOOGLE_MAPS_API_KEY="<API_KEY_GOOGLE_MAPS>"
 
 EXPOSE $SERVER_PORT
 
