@@ -1,26 +1,41 @@
 plugins {
-    id 'java'
+   id 'java'
+   id 'org.springframework.boot' version '2.4.5'
+   id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 group 'br.com.desafio-stoom'
 version '1.0-SNAPSHOT'
+sourceCompatibility = '1.11'
 
 repositories {
-    mavenCentral()
+   mavenCentral()
+}
+
+jar {
+   manifest {
+      attributes(
+            'Main-Class': 'br.com.desafiostoom.application.Application'
+      )
+   }
 }
 
 dependencies {
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.4.5'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.5'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.5'
-    implementation group: 'org.springframework.data', name: 'spring-data-commons', version: '2.5.0'
-    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.5.0'
-    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
-    implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+   implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.4.5'
+   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.5'
+   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.5'
+   implementation group: 'org.springframework.data', name: 'spring-data-commons', version: '2.5.0'
+   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.5'
+   implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.24'
+   implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.5.0'
+   implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
+   implementation group: 'com.google.maps', name: 'google-maps-services', version: '0.18.0'
+   testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+   testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.4.5'
+   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 }
 
 test {
-    useJUnitPlatform()
+   useJUnitPlatform()
 }

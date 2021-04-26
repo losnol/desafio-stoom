@@ -1,20 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
 spring:
   h2:
     console:
       enabled: true
-  relational-database:
-  enable: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;DB_CLOSE_DELAY=-1
+    username: root
+    password: root
   jpa:
-    properties:
-      hibernate:
-          ddl-auto: update
-          dialect: org.hibernate.dialect.H2Dialect
-      generate-ddl: true
-    packages-to-scan: "br.com.desafiostoom.application.data.entity"
-    datasource:
-      driver-class-name: org.h2.Driver
-      url: jdbc:h2:file:C:/temp/test_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;DB_CLOSE_DELAY=-1
-      username: SA
-      password: ""
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
 google-maps:
   api-key: AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw

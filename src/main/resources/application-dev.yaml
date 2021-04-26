@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/desafio_stoom?createDatabaseIfNotExist=true&allowMultiQueries=true
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: update
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+google-maps:
+  api-key: AIzaSyCj0cY2yEvVfYhAaTz3-P2MW-YRKmhz5Uw
